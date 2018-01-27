@@ -10,20 +10,10 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/main.js"></script>
 
-  <style>
-    .section-with-bg {
-      border-radius: 6px;
-      background: #eee;
-      padding: 1em;
-      margin: 1em;
-    }
-  </style>
   </head>
   <body>
-
-
       
       {+body /}
-    </div>
+      
   </body>
 </html>
