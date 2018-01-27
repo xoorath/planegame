@@ -4,7 +4,7 @@
 
   <div class="row marketing">
     
-    <div class="floatCenterbox">
+
 
      <div class="section" style="text-align:center"> 
 		<img src="/img/Bullet.png"> <font size="20" id="AmmoCount"></font> 
@@ -15,7 +15,7 @@
 	</br>
 
     <button type="button" class="btn btn-warning btn-massive center-block" id="ReloadBtn"">Reload</button>
-</div>
+
 
   </div>
 
