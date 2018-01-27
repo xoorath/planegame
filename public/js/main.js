@@ -2,6 +2,11 @@ $(document).ready(function () {
 
 
 	var PlayerId = 0;
+
+	var AmmoCount = 5;
+	$("#AmmoCount").text(AmmoCount);
+
+
 	Joingame();
 
 	function Joingame()
@@ -39,7 +44,20 @@ $(document).ready(function () {
 			PlayerId: PlayerId,
 			Fired: 1
 		};
-		PostData(sendInfo,'/fireEvent');
+
+		if(AmmoCount > 0)
+		{
+			PostData(sendInfo,'/fireEvent');
+			AmmoCount--;
+			$("#AmmoCount").text(AmmoCount);
+		}
+
+
+	});
+
+	$("#ReloadBtn").click(function(){
+		AmmoCount = 5;
+		$("#AmmoCount").text(AmmoCount);
 	});
 
 	function PostData(data, url)

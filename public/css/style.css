@@ -7,3 +7,11 @@ body {
 .player2-color {
   background-color: #FF0000;
 }
+
+.btn-massive {
+  padding: 10px 16px;
+  font-size: 100px;
+  line-height: 1.3333333;
+  border-radius: 8px;
+  width: 50%;
+}
