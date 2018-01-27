@@ -1,5 +1,24 @@
 $(document).ready(function () {
 
+
+	var PlayerId = 0;
+	Joingame();
+
+	function Joingame()
+	{
+		$.ajax({
+		  type: "GET",
+		  url: '/join',
+		  dataType: "json",
+		  success: function (msg) {
+		  	PlayerId = msg;
+            $("#Output").text(JSON.stringify(msg));
+           }
+		});
+	}
+
+
+
 	setTimeout(getData, 250);
 
 	function getData()
@@ -17,33 +36,25 @@ $(document).ready(function () {
 	}
  
 
-	$("#speedBtnMinus,#speedBtnPlus").click(function(){
-
-		var speed = 0;
-		if(this.value == 'Minus')
-			speed = -1;
-		else
-			speed = 1;
+	$("#FireBtn").click(function(){
 
 		var sendInfo = {
-			id: 0,
-			speed: speed,
-			ammoSpeed: 0
+			PlayerId: PlayerId,
+			Fired: 1
 		};
 
-		PostData(sendInfo);
+		PostData(sendInfo,'/fireEvent');
 	});
 
-	function PostData(data)
+	function PostData(data, url)
 	{
 		$.ajax({
 		  type: "POST",
-		  url: '/setInfo',
+		  url: url,
 		  dataType: "json",
 		  data: data,
 		  success: function (msg) {
                console.log(msg);
-               $("#Output").text(JSON.stringify(msg));
            }
 		});
 	}

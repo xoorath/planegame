@@ -7,8 +7,8 @@
 
     <div class="col-lg-12 player1-color">
       <div class="section-with-bg" style="text-align:center">
-        <button type="button" class="btn btn-danger btn-block" id="speedBtnMinus" value="Minus">Fire</button>
-        <button type="button" class="btn btn-warning btn-block" id="speedBtnPlus" value="Plus">Reload</button>
+        <button type="button" class="btn btn-danger btn-block" id="FireBtn">Fire</button>
+        <button type="button" class="btn btn-warning btn-block" id="ReloadBtn"">Reload</button>
       </div>
     </div>
 

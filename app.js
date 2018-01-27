@@ -22,38 +22,35 @@ app.get('/', function (req, res) {
 
 
 var Users = [];
-var RoomNumber = 1;
+var CurrentID = 0;
 
-StartSession();
-
-
-function StartSession()
+function JoinRoom()
 {
-	Users = [];
-	Users.push({speed: 5, ammoSpeed: 5});
-	Users.push({speed: 5, ammoSpeed: 5});
+	Users.push({PlayerId: CurrentID, Fired: 0});
+	CurrentID++;
 }
 
-app.get('/reset', function (req, res) {
-  StartSession();
-  res.send('true');
+app.get('/join', function (req, res) {
+  JoinRoom();
+  res.send(CurrentID);
 });
 
 
 app.get('/getInfo', function (req, res) {
   res.send(Users);
+
+	for(var i = 0; i < Users.length; i++)
+	{
+		Users[i].Fired = 0;
+	}
 });
 
 
-app.post('/setInfo',function(req,res){
+app.post('/fireEvent',function(req,res){
 
-	Users[req.body.id].speed += parseInt(req.body.speed);
-	if(Users[req.body.id].speed <= 0) Users[req.body.id].speed = 0;
+	Users[req.body.PlayerId].Fired = parseInt(req.body.Fired)
 
-	Users[req.body.id].ammoSpeed += parseInt(req.body.ammoSpeed);
-	if(Users[req.body.id].ammoSpeed <= 0) Users[req.body.id].ammoSpeed = 0;
-
-	res.json(Users);
+	res.end('true');
 
 });
 
