@@ -20,7 +20,43 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+
+var Users = [];
+var RoomNumber = 1;
+
+StartSession();
+
+
+function StartSession()
+{
+	Users = [];
+	Users.push({speed: 5, ammoSpeed: 5});
+	Users.push({speed: 5, ammoSpeed: 5});
+}
+
+app.get('/reset', function (req, res) {
+  StartSession();
+  res.send('true');
+});
+
+
+app.get('/getInfo', function (req, res) {
+  res.send(Users);
+});
+
+
+app.post('/setInfo',function(req,res){
+
+	Users[req.body.id].speed += parseInt(req.body.speed);
+	if(Users[req.body.id].speed <= 0) Users[req.body.id].speed = 0;
+
+	Users[req.body.id].ammoSpeed += parseInt(req.body.ammoSpeed);
+	if(Users[req.body.id].ammoSpeed <= 0) Users[req.body.id].ammoSpeed = 0;
+
+	res.json(Users);
+
+});
+
 app.listen(3000, function () {
   console.log('Server Started On Port 3000');
-
 });

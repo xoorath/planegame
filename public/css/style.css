@@ -1,3 +1,9 @@
 body {
   margin-top: 10px;
 }
+.player1-color {
+  background-color: #0000FF;
+}
+.player2-color {
+  background-color: #FF0000;
+}

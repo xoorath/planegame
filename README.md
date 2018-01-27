@@ -1,3 +1,2 @@
-# planegame
-
-test 2
+# NodeDustStartingPoint
+Node.js, Dust.js StartingPoint
