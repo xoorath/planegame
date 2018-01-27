@@ -13,5 +13,12 @@ body {
   font-size: 100px;
   line-height: 1.3333333;
   border-radius: 8px;
-  width: 50%;
+  width: 100%;
+}
+
+.floatCenterbox {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
