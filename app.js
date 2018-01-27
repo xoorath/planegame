@@ -32,7 +32,7 @@ function JoinRoom()
 
 app.get('/join', function (req, res) {
   JoinRoom();
-  res.send(CurrentID);
+  res.json({PlayerId: CurrentID-1});
 });
 
 
@@ -47,8 +47,7 @@ app.get('/getInfo', function (req, res) {
 
 
 app.post('/fireEvent',function(req,res){
-
-	Users[req.body.PlayerId].Fired = parseInt(req.body.Fired)
+	Users[parseInt(req.body.PlayerId)].Fired = parseInt(req.body.Fired)
 
 	res.end('true');
 

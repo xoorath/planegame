@@ -11,13 +11,10 @@ $(document).ready(function () {
 		  url: '/join',
 		  dataType: "json",
 		  success: function (msg) {
-		  	PlayerId = msg;
-            $("#Output").text(JSON.stringify(msg));
+		  	PlayerId = msg.PlayerId;
            }
 		});
 	}
-
-
 
 	setTimeout(getData, 250);
 
@@ -42,7 +39,6 @@ $(document).ready(function () {
 			PlayerId: PlayerId,
 			Fired: 1
 		};
-
 		PostData(sendInfo,'/fireEvent');
 	});
 
