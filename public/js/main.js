@@ -1,4 +1,21 @@
 $(document).ready(function () {
+
+	setTimeout(getData, 500);
+
+	function getData()
+	{
+		$.ajax({
+		  type: "GET",
+		  url: '/getInfo',
+		  dataType: "json",
+		  success: function (msg) {
+               $("#Output").text(JSON.stringify(msg));
+           }
+		});
+		
+		setTimeout(getData, 500);
+
+	}
  
 
 	$("#speedBtnMinus,#speedBtnPlus").click(function(){
