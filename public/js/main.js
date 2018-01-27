@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	setTimeout(getData, 500);
+	setTimeout(getData, 250);
 
 	function getData()
 	{
@@ -12,9 +12,8 @@ $(document).ready(function () {
                $("#Output").text(JSON.stringify(msg));
            }
 		});
-		
-		setTimeout(getData, 500);
 
+		setTimeout(getData, 250);
 	}
  
 
