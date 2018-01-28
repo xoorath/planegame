@@ -40,6 +40,18 @@ app.post('/join', function (req, res) {
   res.json({Id: CurrentID-1, Team: CurrentTeam});
 });
 
+app.post('/remove', function (req, res) {
+	
+	for(var i = 0; i < Users.length; i++)
+	{
+		Users[i].Id = parseInt(req.body.Id);
+		Users.splice(i, 1);
+			console.log(parseInt(req.body.Id))
+	}
+ 
+  res.end('true');
+});
+
 
 app.get('/getInfo', function (req, res) {
   res.send(Users);

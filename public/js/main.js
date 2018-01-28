@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
 
+
+
 	var PlayerId = 0;
 	var PlayerTeam = 0;
 
@@ -31,21 +33,20 @@ $(document).ready(function () {
 		});
 	}
 
-	setTimeout(getData, 250);
+	window.onbeforeunload = function() {
 
-	function getData()
-	{
-		$.ajax({
-		  type: "GET",
-		  url: '/getInfo',
+		var sendInfo = {
+			Id: PlayerId
+		};
+		
+     	$.ajax({
+		  type: "POST",
+		  url: '/remove',
 		  dataType: "json",
-		  success: function (msg) {
-               $("#Output").text(JSON.stringify(msg));
-           }
+		  data: sendInfo
 		});
-
-		setTimeout(getData, 250);
 	}
+
  
 
 	$("#FireBtn").click(function(){
