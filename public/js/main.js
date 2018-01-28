@@ -2,23 +2,31 @@ $(document).ready(function () {
 
 
 	var PlayerId = 0;
+	var PlayerTeam = 0;
 
 	var AmmoCount = 5;
 	$("#AmmoCount").text(AmmoCount);
 
-	
-	var username = $("#username").val();
+	$("#username").val("Chris Z");
+
 
 	Joingame();
 
 	function Joingame()
 	{
+		console.log($("#username").val());
+		var sendInfo = {
+			Name: $("#username").val()
+		};
+
 		$.ajax({
-		  type: "GET",
+		  type: "POST",
 		  url: '/join',
 		  dataType: "json",
+		  data: sendInfo,
 		  success: function (msg) {
-		  	PlayerId = msg.PlayerId;
+               PlayerId = msg.Id;
+               PlayerTeam = msg.Team;
            }
 		});
 	}
@@ -43,7 +51,9 @@ $(document).ready(function () {
 	$("#FireBtn").click(function(){
 
 		var sendInfo = {
-			PlayerId: PlayerId,
+			Id: PlayerId,
+			Team: PlayerTeam,
+			Name: $("#username").val(),
 			Fired: 1
 		};
 

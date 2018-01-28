@@ -22,16 +22,22 @@ app.get('/', function (req, res) {
 
 var Users = [];
 var CurrentID = 0;
+var CurrentTeam = 0;
 
-function JoinRoom()
+function JoinRoom(name)
 {
-	Users.push({PlayerId: CurrentID, Fired: 0});
+	Users.push({Id: CurrentID, Team: CurrentTeam, Name: name, Fired: 0});
+
 	CurrentID++;
+	if(CurrentTeam == 0)
+		CurrentTeam = 1;
+	else
+		CurrentTeam = 0
 }
 
-app.get('/join', function (req, res) {
-  JoinRoom();
-  res.json({PlayerId: CurrentID-1});
+app.post('/join', function (req, res) {
+  JoinRoom(req.body.Name);
+  res.json({Id: CurrentID-1, Team: CurrentTeam});
 });
 
 
@@ -46,7 +52,7 @@ app.get('/getInfo', function (req, res) {
 
 
 app.post('/fireEvent',function(req,res){
-	Users[parseInt(req.body.PlayerId)].Fired = parseInt(req.body.Fired)
+	Users[parseInt(req.body.Id)].Fired = parseInt(req.body.Fired)
 
 	res.end('true');
 
