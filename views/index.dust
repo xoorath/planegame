@@ -2,20 +2,19 @@
 
 {<body}
 
-<div id="content">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	 <div class="floatCenterbox">
+
+	<div class="floatCenterbox">
      	<div class="section-with-bg" style="text-align:center" id="sectionBox"> 
             <input type="text" class="form-control" id="username" placeholder="Username">
     		</br>
 			</br>
     	<button type="button" class="btn btn-success btn-large center-block" id="Play">Play</button>
 
-          </div> 
-          </div> 
+        </div> 
+    </div> 
       
-   
-
     
     <div class="section" style="text-align:center"> 
 		<img src="/img/Bullet.png" id="bulletImg"> <font size="20" id="AmmoCount"></font> 
@@ -26,7 +25,6 @@
     <button type="button" class="btn btn-warning btn-massive center-block" id="ReloadBtn">Reload</button>
 
 
- </div> 
 
 
     <!--<div class="section" style="text-align:center">
