@@ -2,6 +2,11 @@ body {
   margin-top: 10px;
 }
 
+#content {
+    width: 200px;
+    margin: auto auto;
+}
+
 .btn-massive {
   padding: 10px 16px;
   font-size: 100px;
@@ -20,9 +25,9 @@ body {
 
 .floatCenterbox {
   position: absolute;
-  top: 0%;
+  top: 50%;
   left:50%;
-  transform: translate(-50%,0%);
+  transform: translate(-50%,-50%);
 }
 
 .tint { background: rgba(0,255,255, 0.75); }

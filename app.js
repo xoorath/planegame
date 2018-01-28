@@ -35,6 +35,12 @@ function JoinRoom(name)
 		CurrentTeam = 0
 }
 
+app.get('/reset', function (req, res) {
+  	Users = [];
+	CurrentID = 0;
+	CurrentTeam = 0;
+});
+
 app.post('/join', function (req, res) {
   JoinRoom(req.body.Name);
   res.json({Id: CurrentID-1, Team: CurrentTeam});

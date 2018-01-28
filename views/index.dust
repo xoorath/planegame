@@ -2,7 +2,7 @@
 
 {<body}
 
-
+<div id="content">
 
 	 <div class="floatCenterbox">
      	<div class="section-with-bg" style="text-align:center" id="sectionBox"> 
@@ -10,10 +10,11 @@
     		</br>
 			</br>
     	<button type="button" class="btn btn-success btn-large center-block" id="Play">Play</button>
-      </div> 
-      
-    </div> 
 
+          </div> 
+          </div> 
+      
+   
 
     
     <div class="section" style="text-align:center"> 
@@ -23,6 +24,10 @@
     <button type="button" class="btn btn-danger btn-massive center-block" id="FireBtn">Fire</button>
 	</br>
     <button type="button" class="btn btn-warning btn-massive center-block" id="ReloadBtn">Reload</button>
+
+
+ </div> 
+
 
     <!--<div class="section" style="text-align:center">
     	</br>
