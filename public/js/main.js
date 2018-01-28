@@ -5,7 +5,9 @@ $(document).ready(function () {
 
 	var AmmoCount = 5;
 	$("#AmmoCount").text(AmmoCount);
-$("#username").val("Glenn Quagmire");
+
+	
+	var username = $("#username").val();
 
 	Joingame();
 
