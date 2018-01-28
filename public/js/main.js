@@ -8,6 +8,7 @@ $(document).ready(function () {
 		$("#username").show()
 		$("#Play").show()
 		$("#sectionBox").show()
+		$("#Title").show()
 
 		$("#FireBtn").hide()
 		$("#ReloadBtn").hide()
@@ -27,6 +28,7 @@ $(document).ready(function () {
 		$("#username").hide()
 		$("#Play").hide()
 		$("#sectionBox").hide()
+		$("#Title").hide()
 
 		$("#FireBtn").show()
 		$("#ReloadBtn").show()

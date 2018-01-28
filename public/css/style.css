@@ -25,11 +25,9 @@ body {
   transform: translate(-50%,-50%);
 }
 
-.tint { background: rgba(0,255,255, 0.75); }
-
 .section-with-bg {
-  border-radius: 6px;
+  border-radius: 8px;
   background: #eee;
-  padding: 2em;
+  padding: 1em;
   margin: 1em;
 }
