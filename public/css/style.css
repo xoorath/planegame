@@ -7,7 +7,7 @@ body {
   font-size: 75px;
   line-height: 1.3333333;
   border-radius: 8px;
-  width: 75%;
+  width: 40%;
 }
 
 .btn-large {
@@ -30,4 +30,8 @@ body {
   background: #eee;
   padding: 1em;
   margin: -7em;
+}
+
+.responsive-width {
+    font-size: 4vw;
 }
