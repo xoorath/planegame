@@ -4,10 +4,10 @@ body {
 
 .btn-massive {
   padding: 10px 16px;
-  font-size: 100px;
+  font-size: 75px;
   line-height: 1.3333333;
   border-radius: 8px;
-  width: 100%;
+  width: 75%;
 }
 
 .btn-large {
@@ -30,6 +30,6 @@ body {
 .section-with-bg {
   border-radius: 6px;
   background: #eee;
-  padding: 1em;
+  padding: 2em;
   margin: 1em;
 }
