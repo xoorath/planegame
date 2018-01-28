@@ -1,12 +1,6 @@
 body {
   margin-top: 10px;
 }
-.player1-color {
-  background-color: #0000FF;
-}
-.player2-color {
-  background-color: #FF0000;
-}
 
 .btn-massive {
   padding: 10px 16px;
@@ -22,3 +16,5 @@ body {
   left:50%;
   transform: translate(-50%,-50%);
 }
+
+.tint { background: rgba(0,255,255, 0.75); }

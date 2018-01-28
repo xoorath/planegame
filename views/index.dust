@@ -2,6 +2,13 @@
 
 {<body}
 
+
+	<div class="row">
+	    <div class="col-lg-2 col-lg-offset-5">
+	            <input type="text" class="form-control" id="username" placeholder="Username">
+	    </div>
+	</div>
+
     
     <div class="section" style="text-align:center"> 
 		<img src="/img/Bullet.png"> <font size="20" id="AmmoCount"></font> 
@@ -11,7 +18,10 @@
 	</br>
     <button type="button" class="btn btn-warning btn-massive center-block" id="ReloadBtn">Reload</button>
 
-
+    <!--<div class="section" style="text-align:center">
+    	</br>
+			<img src="/img/Cannon.png" class="tint">
+	</div>-->
 
    <!-- <h1 id="Output">{}</h1> -->
 

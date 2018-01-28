@@ -20,7 +20,6 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
-
 var Users = [];
 var CurrentID = 0;
 
