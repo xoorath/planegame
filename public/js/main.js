@@ -9,6 +9,7 @@ $(document).ready(function () {
 		$("#Play").show()
 		$("#sectionBox").show()
 		$("#Title").show()
+		$("#BoxInfo").show()
 
 		$("#FireBtn").hide()
 		$("#ReloadBtn").hide()
@@ -29,6 +30,7 @@ $(document).ready(function () {
 		$("#Play").hide()
 		$("#sectionBox").hide()
 		$("#Title").hide()
+		$("#BoxInfo").hide()
 
 		$("#FireBtn").show()
 		$("#ReloadBtn").show()

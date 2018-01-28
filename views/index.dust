@@ -8,9 +8,12 @@
 
 	<div class="floatCenterbox">
      	<div class="section-with-bg" style="text-align:center" id="sectionBox"> 
+     		<font size="5" id="BoxInfo">Enter a Username to Play</font> 
+    		</br>
+    		</br>
+
             <input type="text" class="form-control" id="username" placeholder="Username">
     		</br>
-			</br>
     	<button type="button" class="btn btn-success btn-large center-block" id="Play">Play</button>
 
         </div> 
