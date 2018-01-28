@@ -3,15 +3,22 @@
 {<body}
 
 
-	<div class="row">
-	    <div class="col-lg-2 col-lg-offset-5">
-	            <input type="text" class="form-control" id="username" placeholder="Username">
-	    </div>
-	</div>
+
+	 	 <div class="floatCenterbox">
+	 
+     	<div class="section-with-bg" style="text-align:center" id="sectionBox"> 
+            <input type="text" class="form-control" id="username" placeholder="Username">
+    		</br>
+			</br>
+    	<button type="button" class="btn btn-success btn-large center-block" id="Play">Play</button>
+      </div> 
+      
+    </div> 
+
 
     
     <div class="section" style="text-align:center"> 
-		<img src="/img/Bullet.png"> <font size="20" id="AmmoCount"></font> 
+		<img src="/img/Bullet.png" id="bulletImg"> <font size="20" id="AmmoCount"></font> 
 	</div>
 
     <button type="button" class="btn btn-danger btn-massive center-block" id="FireBtn">Fire</button>

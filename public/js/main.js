@@ -1,29 +1,43 @@
 $(document).ready(function () {
 
-
+	StartScreen()
 
 
 	function StartScreen()
 	{
-		
+		$("#username").show()
+		$("#Play").show()
+		$("#sectionBox").show()
+
+		$("#FireBtn").hide()
+		$("#ReloadBtn").hide()
+		$("#bulletImg").hide()
+		$("#AmmoCount").hide()
+
+
+		$("#Play").click(function(){
+
+			if($("#username").val() != "")
+				ChangeScene();
+		});
 	}
 
 	function ChangeScene()
 	{
-		
-	}
+		$("#username").hide()
+		$("#Play").hide()
+		$("#sectionBox").hide()
 
+		$("#FireBtn").show()
+		$("#ReloadBtn").show()
+		$("#bulletImg").show()
+		$("#AmmoCount").show()
 
-
-
-	var PlayerId = 0;
+		var PlayerId = 0;
 	var PlayerTeam = 0;
 
 	var AmmoCount = 5;
 	$("#AmmoCount").text(AmmoCount);
-
-	$("#username").val("Chris Z");
-
 
 	Joingame();
 
@@ -97,6 +111,13 @@ $(document).ready(function () {
            }
 		});
 	}
+
+	}
+
+
+
+
+	
 
  });
 
