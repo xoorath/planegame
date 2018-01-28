@@ -20,9 +20,9 @@ body {
 
 .floatCenterbox {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left:50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,0%);
 }
 
 .tint { background: rgba(0,255,255, 0.75); }
@@ -32,11 +32,4 @@ body {
   background: #eee;
   padding: 1em;
   margin: 1em;
-}
-
-.floatCenterbox { 
-  position: absolute; 
-  top: 50%; 
-  left:50%; 
-  transform: translate(-50%,-50%); 
 }

@@ -47,7 +47,6 @@ app.post('/remove', function (req, res) {
 		if(Users[i].Id == parseInt(req.body.Id))
 		{
 			Users.splice(i, 1);
-			console.log(parseInt(req.body.Id))
 		}
 	}
  
@@ -66,7 +65,6 @@ app.get('/getInfo', function (req, res) {
 
 
 app.post('/fireEvent',function(req,res){
-
 
 	for(var i = 0; i < Users.length; i++)
 	{
