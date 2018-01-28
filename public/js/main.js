@@ -3,6 +3,19 @@ $(document).ready(function () {
 
 
 
+	function StartScreen()
+	{
+		
+	}
+
+	function ChangeScene()
+	{
+		
+	}
+
+
+
+
 	var PlayerId = 0;
 	var PlayerTeam = 0;
 
@@ -38,7 +51,7 @@ $(document).ready(function () {
 		var sendInfo = {
 			Id: PlayerId
 		};
-		
+
      	$.ajax({
 		  type: "POST",
 		  url: '/remove',
@@ -46,7 +59,6 @@ $(document).ready(function () {
 		  data: sendInfo
 		});
 	}
-
  
 
 	$("#FireBtn").click(function(){
