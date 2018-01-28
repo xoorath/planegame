@@ -26,9 +26,9 @@
 		<img src="/img/Bullet.png" id="bulletImg"> <font size="20" id="AmmoCount"></font> 
 	</div>
 
-    <button type="button" class="btn btn-danger btn-massive center-block responsive-width" id="FireBtn">Fire</button>
+    <button type="button" class="btn btn-danger btn-massive center-block" id="FireBtn">Fire</button>
 	</br>
-    <button type="button" class="btn btn-warning btn-massive center-block responsive-width" id="ReloadBtn">Reload</button>
+    <button type="button" class="btn btn-warning btn-massive center-block" id="ReloadBtn">Reload</button>
 
 
 
